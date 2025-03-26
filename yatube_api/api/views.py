@@ -50,7 +50,6 @@ class CommentViewSet(PermissionViewset):
         )
 
 
-
 class FollowViewSet(
     viewsets.GenericViewSet,
     mixins.CreateModelMixin,
