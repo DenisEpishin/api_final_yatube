@@ -13,6 +13,13 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
 
 
+class GroupSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Group
+        fields = ('id', 'title', 'slug', 'description')
+        read_only_fields = ('id', 'title', 'slug', 'description')
+
+
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
         read_only=True, slug_field='username'
